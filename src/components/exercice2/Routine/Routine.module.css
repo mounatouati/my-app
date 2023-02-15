@@ -1,0 +1,6 @@
+.container{
+    background-color: rgb(192, 204, 243);
+    /*border: 3px solid navy;*/
+    padding:20px;
+    margin: 5px;
+}

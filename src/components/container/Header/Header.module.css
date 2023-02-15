@@ -1,0 +1,10 @@
+/* Créer un module css pour styliser le header et le h1
+Importer le module dans le composant
+Lier les classes avec les éléments */
+
+.container{
+    background-color:bisque;
+    border: 1px salmon;
+    padding:10px;
+    color: blueviolet;
+}
