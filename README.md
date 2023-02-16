@@ -68,6 +68,37 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-Exercice 2:
+Exercice 2 Article:
 1. Créer un composant Articles, et l'afficher dans le composant App.js
 2. Utiliser un map, pou afficher les articles suivant.
+
+Exercice 2 Routine:
+1/ Créez un composant Routine qui affiche 3 boutons : 
+"Manger", "Dormir", "Étudier".
+2/ Ajoutez un onClick à chaque bouton de sorte que, 
+lorsqu'il est cliqué, l'utilisateur soit averti par un 
+message (utilisez la fonction alert)
+
+Exercice 2 Button:
+1. Créer un composant Button:
+2.  Dans children: le texte a afficher dans le bouton
+3.  Une fonction a executer quant on clique dessus
+4.  Une couleur de font pour colorer le bouton
+
+Exercice 2 OnOff:
+1. Créer un composant OnOff:
+2. Un variable d'état initialiser a false.
+3.Afficher avec un opérateur: on ou off suivant la valeur la variable d'atat.
+4. Bouton pour changer la valeur de la variable d'etat.
+
+Exercice LoginForm:
+Créer un composant LoginForm:
+  - Un input pour l'email
+  - Un input pour username
+  - Un input pour password
+  - Un bouton pour valider la formulaire, qui affiche une alerte avec email et username
+
+Afficher des erreurs derrière les inputs
+  - email: tester si il possède un @
+  - password: minimum 6car.
+  - username pas vide 
