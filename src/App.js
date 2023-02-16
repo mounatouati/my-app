@@ -8,8 +8,9 @@ import Articles from './components/exercice2/Articles/Articles';
 import Routine from './components/exercice2/Routine/Routine';
 import Button from './components/exercice2/Button/Button';
 import Counter from './components/exercice2/Counter/Counter';
-
-
+import NameForm from  './components/NameForm/NameForm';
+import LoginForm from  './components/LoginForm/LoginForm';
+import Menu from './components/exercice2/Menu/Menu';
 function ClickableText() {
   function handleClick(){
     alert('click!!!!!!!!')
@@ -21,7 +22,8 @@ function Texte(props){
 
   return(
     <div onClick={props.laFonction}>
-      <p style ={{color: props.couleur}}> {props.children} </p>
+      <p style ={{color: props.couleur,fontSize:props.size,fontFamily: props.fond}}> {props.children} </p>
+           
     </div>
   )
 }
@@ -42,8 +44,11 @@ let userFromDB = {
 };
   return (
 <div>
-<Texte laFonction={afficheSalut} couleur="red">Hello!</Texte>
-<Texte laFonction={afficheBonjour} couleur="green">Bonjour</Texte>
+<Texte laFonction={afficheSalut} couleur="Salmon"size='20px' fond='cursive'>TOUATI Mouna</Texte>
+<Texte laFonction={afficheBonjour} couleur="Indigo" size='20px' fond='cursive'>Formation ReactJS</Texte>
+<LoginForm></LoginForm>
+<NameForm></NameForm>
+<Menu> </Menu>
 <Counter />
 <Button laFonction={affiche} couleur="yellow" w="80px" h="40px" m="15px">JS</Button>
 <Routine />
