@@ -102,3 +102,22 @@ Afficher des erreurs derrière les inputs
   - email: tester si il possède un @
   - password: minimum 6car.
   - username pas vide 
+  
+Exercice:
+Créer un composant InputWithError.
+Qui affiche un input, message d'error dans un paragraphe.
+
+<InputWithError 
+  type="email" 
+  placeholder='Email' 
+  onChange={handleEmail} 
+  value={emailInput} 
+  errorMessage={emailError} /> 
+
+  <InputWithError 
+    type="password" 
+    placeholder='Password' 
+    onChange={handlePassword} 
+    value={passwordInput} 
+    errorMessage={emailError} /> 
+  
