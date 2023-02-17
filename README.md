@@ -33,38 +33,56 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 
 **Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Exercice 2 Article:
+1. Créer un composant Articles, et l'afficher dans le composant App.js
+2. Utiliser un map, pou afficher les articles suivant.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Exercice 2 Routine:
+1/ Créez un composant Routine qui affiche 3 boutons : 
+"Manger", "Dormir", "Étudier".
+2/ Ajoutez un onClick à chaque bouton de sorte que, 
+lorsqu'il est cliqué, l'utilisateur soit averti par un 
+message (utilisez la fonction alert)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Exercice 2 Button:
+1. Créer un composant Button:
+2.  Dans children: le texte a afficher dans le bouton
+3.  Une fonction a executer quant on clique dessus
+4.  Une couleur de font pour colorer le bouton
 
-## Learn More
+Exercice 2 OnOff:
+1. Créer un composant OnOff:
+2. Un variable d'état initialiser a false.
+3.Afficher avec un opérateur: on ou off suivant la valeur la variable d'atat.
+4. Bouton pour changer la valeur de la variable d'etat.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Exercice LoginForm:
+Créer un composant LoginForm:
+  - Un input pour l'email
+  - Un input pour username
+  - Un input pour password
+  - Un bouton pour valider la formulaire, qui affiche une alerte avec email et username
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Afficher des erreurs derrière les inputs
+  - email: tester si il possède un @
+  - password: minimum 6car.
+  - username pas vide 
+  
+Exercice:
+Créer un composant InputWithError.
+Qui affiche un input, message d'error dans un paragraphe.
 
-### Code Splitting
+<InputWithError 
+  type="email" 
+  placeholder='Email' 
+  onChange={handleEmail} 
+  value={emailInput} 
+  errorMessage={emailError} /> 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+  <InputWithError 
+    type="password" 
+    placeholder='Password' 
+    onChange={handlePassword} 
+    value={passwordInput} 
+    errorMessage={emailError} /> 
+  
