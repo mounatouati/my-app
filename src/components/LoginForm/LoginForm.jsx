@@ -1,13 +1,15 @@
-//Exercice:
-//Créer un composant LoginForm:
-//Un input pour l'email
-//Un input pour username
-//Un input pour password
-//Un bouton pour valider la formulaire, qui affiche une alerte avec email et username
+
 import React from 'react'
-import { useState } from "react";
+import { useState ,useContext} from "react";
 import InputWithError from '../InputWithError/InputWithError';
+import LangageContext from "../../contexts/LangageContext";
+//import mesclasses from './LoginForm.module.css';
 export default function LoginForm() {
+ 
+  const {langage} =useContext(LangageContext);
+  //const test =useContext(LangageContext);
+  //console.log(test);
+
 
   const [email, setemail] = useState("");
   const [username, setusername] = useState("");
@@ -32,18 +34,18 @@ export default function LoginForm() {
 
   }
   function sendToDb() {
-    
+
     setalertem('');
     setalertname('');
     setalertpass('');
 
     if (email.includes('@') && username !== "" && password.length >= 6) {
-      setform("Connexion "+username );
+      setform("Connexion " + username);
       setemail('');
       setusername('');
       setuserpasse('');
       return;
-      
+
     }
 
     if (!email.includes('@')) {
@@ -55,31 +57,39 @@ export default function LoginForm() {
     if (!username.replace(/\s+/, '').length) {
       setalertname("Entrer Username");
     }
-  
+
   }
   return (
-    <div>
-      <InputWithError 
-  type="email" 
-  placeholder='Email' 
-  onChange={handleemail} 
-  value={email} 
-  errorMessage={alertem} /> 
-         <InputWithError 
-  type="text" 
-  placeholder='username' 
-  onChange={handleuser} 
-  value={username} 
-  errorMessage={alertname} /> 
-         <InputWithError 
-  type="password" 
-  placeholder='password' 
-  onChange={handlepass} 
-  value={password} 
-  errorMessage={alertpass} /> 
-
-      <button onClick={sendToDb}> Valider </button>
-      <p>{form}</p>
-    </div>
+  <div  style={{
+    width: "100%",
+    backgroundColor: "hsl(0, 0%, 90%)",
+    padding: "1em",
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center"
+  }} >
+      
+        <h2> {langage}</h2>
+        <InputWithError
+          type="email"
+          placeholder='Email'
+          onChange={handleemail}
+          value={email}
+          errorMessage={alertem} />
+        <InputWithError
+          type="text"
+          placeholder='username'
+          onChange={handleuser}
+          value={username}
+          errorMessage={alertname} />
+        <InputWithError
+          type="password"
+          placeholder='password'
+          onChange={handlepass}
+          value={password}
+          errorMessage={alertpass} />
+        <button onClick={sendToDb}> Valider </button>
+        <p>{form}</p>
+      </div>
   )
 }

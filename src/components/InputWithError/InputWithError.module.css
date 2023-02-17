@@ -1,0 +1,25 @@
+.inputContainer{
+  display: flex;
+  background-color: whitesmoke;
+  padding: 0.5em;
+  border-radius: 0.5em;
+  min-width: 300px;
+  justify-content: space-between;
+}
+.input{
+    border:none;
+    outline: none;
+    background-color: transparent;
+  
+  }
+  
+  .input:focus{
+    outline: none;
+  }
+  .error{
+    color: red;
+    font-size: 0.8em;
+  }
+  .image{
+    width: 25px;
+  }
